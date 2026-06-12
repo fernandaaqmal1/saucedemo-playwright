@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('loginfail', async ({ page }) => {
+test('login with invalid account', async ({ page }) => {
   await page.goto('https://www.saucedemo.com/');
   await expect(page.locator('#root')).toMatchAriaSnapshot(`- text: Swag Labs`);
   await page.locator('[data-test="username"]').click();
